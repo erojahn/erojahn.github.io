@@ -1,7 +1,9 @@
 #wrapper{
+background:black;
 width 960px;
 margin-right:auto;
 margin-left:auto;
+font-family: sans-serif;
 }
 header{
 padding-top:10px;
@@ -10,21 +12,27 @@ padding-bottom:10px;
 background: rgb(72,110,68);
 }
 nav{
-text-align:left;
+text-align:right;
 }
 nav ul{
 list-style-type: none;
-padding-left: 900px;
+padding-left: 10px;
 }
 nav li{
-display: inline;
-margin-left: 40px;
 
+display: inline;
+margin-right: 40px;
+
+}
+a {
+color: rgb(72,110,86);
+text-decoration:none;
+font-size:22;
 }
 section{
 height: 550px;
 clear:both;
-background: rgb(32,70,28);
+background: rgb(72,110,68);
 }
 
 footer{
