@@ -1,0 +1,34 @@
+#wrapper{
+width 960px;
+margin-right:auto;
+margin-left:auto;
+}
+header{
+padding-top:10px;
+padding-left:10px;
+padding-bottom:10px;
+background: rgb(72,110,68);
+}
+nav{
+text-align:left;
+}
+nav ul{
+list-style-type: none;
+padding-left: 900px;
+}
+nav li{
+display: inline;
+margin-left: 40px;
+
+}
+section{
+height: 550px;
+clear:both;
+background: rgb(32,70,28);
+}
+
+footer{
+height: 50px;
+clear:both;
+background: rgb(122,60,18);
+}
