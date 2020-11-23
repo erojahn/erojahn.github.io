@@ -127,7 +127,7 @@ text-align:center
                               color: black;
                               font-weight: bold;
                               font-size: 18px;
-                              transition: 0.9s ease;
+                              transition: 1.4s ease;
                               
                               /*border-radius: 0 3px 3px 0;*/
                               user-select: none;
@@ -142,7 +142,7 @@ text-align:center
                             /* On hover, add a black background color with a little bit see-through */
                             .prev:hover, .next:hover {
                               border-radius:25px;
-                              background-color: rgba(50,50,50,0.8);
+                              background-color: rgba(20,50,20,0.8);
                             }
 
                             /* Caption text */
