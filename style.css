@@ -8,7 +8,7 @@ overflow:hidden;
 body{
 margin:0 auto;
 padding:0;
-background: rgb(36, 70, 28);
+background: rgb(72,110,68);
 }
 #main-nav{
 font-size:32;
@@ -23,7 +23,7 @@ left:0;
 padding-top:10px;
 padding-left:10px;
 padding-bottom:10px;
-background:rgb(36, 70, 28);
+background:rgb(72,110,68);
 }
 .zoomContainer > img:hover {
   width: 34.5%;
@@ -58,14 +58,14 @@ padding-top:10px;
 a {
 margin-top:5px;
 font-weight: bold;
-color:rgb(158, 158, 158);
+color:rgb(72,110,68);
 text-decoration:none;
 }
 section{
 padding-top:125px;
 height:100%;
 clear:both;
-background:rgb(36, 70, 28);
+background:rgb(72,110,68);
 }
 .article{
 height:450px;
@@ -91,7 +91,7 @@ border:1px solid black;
 footer{
 height: 50px;
 clear:both;
-background:rgb(106, 138, 70);
+background:rgb(72,110,68);
 }
 .pictures{
 display: block;
