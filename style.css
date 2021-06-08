@@ -23,7 +23,7 @@ left:0;
 padding-top:10px;
 padding-left:10px;
 padding-bottom:10px;
-background:rgb(55,55,50);
+background:rgb(75,75,60);
 }
 .zoomContainer > img:hover {
   width: 34.5%;
@@ -58,7 +58,7 @@ padding-top:10px;
 a {
 margin-top:5px;
 font-weight: bold;
-color:rgb(72,110,68);
+color:rgb(75,75,60);
 text-decoration:none;
 }
 section{
