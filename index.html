@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cathrin Urban - Klavierwerkstatt</title>
+    <title>Simple Parallax Website</title>
     <style>
         html {
-            scroll-behavior: smooth;
-        }
+                scroll-behavior: smooth;
+              }
         * {
             margin: 0;
             padding: 0;
@@ -21,77 +21,69 @@
             overflow-x: hidden;
         }
 
-        /* Parallax background sections - FIXED SOLUTION */
+        /* Parallax background sections */
         .parallax {
-            position: relative;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 100vh; /* Fallback */
-            height: 100dvh; /* Neue Einheit für dynamische Viewport-Höhe */
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-        }
-
-        /* Mobile-spezifische Anpassungen */
-        @media (max-width: 768px) and (orientation: portrait) {
-            .parallax {
-                background-attachment: scroll; /* Auf Mobilgeräten kein fixed */
-                height: 80vh; /* Etwas kleiner auf Mobilgeräten */
-            }
         }
 
         /* Content sections */
         .content {
             padding: 80px 20px;
             text-align: center;
+            
         }
 
         /* Individual sections */
         #logobild {
-            max-width: 40%;
-        }
 
+        max-width: 40%;
+
+        }
         #section1 {
             background-color: #ffffff;
         }
 
         #section2 {
             background-color: #ffffff;
+            
         }
+        #vitaauflistung {
 
+        /* text-align: left; */
+
+        }
         #section3 {
             background-color: #ffffff;
         }
-
         #kontaktlink{
             color: inherit;
             font-weight: bold;
             text-decoration: none;
         }
-
         #section4 {
             background-color: #ffffff;
         }
-
         /* Parallax backgrounds */
         .bg1 {
-            background-image: url('Bilder%20Klavier/Klavier1.JPG');
+            background-image: url(Bilder\ Klavier/Klavier1.JPG) ;
         }
 
         .bg2 {
-            background-image: url('Bilder%20Klavier/Klavier2.JPG');
+            background-image: url(Bilder\ Klavier/Klavier2.JPG) ;
         }
 
         .bg3 {
-            background-image: url('Bilder%20Klavier/Klavier3.JPG');
+            background-image: url(Bilder\ Klavier/Klavier3.JPG) ;
         }
-
         .bg4 {
-            background-image: url('Bilder%20Klavier/Klavier4.JPG');
+            background-image: url(Bilder\ Klavier/Klavier4.JPG) ;
         }
 
         /* Text inside parallax sections */
@@ -129,7 +121,7 @@
 
         /* Simple navigation */
         nav {
-            position: fixed;
+            position:fixed;
             top: 0;
             width: 100%;
             background-color: #161405;
@@ -144,6 +136,7 @@
             display: flex;
             justify-content: center;
             list-style: none;
+          
         }
 
         nav li {
@@ -178,6 +171,8 @@
             font-family: sans-serif;
             font-weight: bold;
             padding: 5px 10px;
+            /* border: 1px solid rgba(255,255,255,0.3); */
+            /* border-radius: 3px */
         }
 
         .menu-toggle span {
@@ -240,10 +235,12 @@
         @media (max-width: 768px) {
             .parallax-text h2 {
                 font-size: 1.8rem;
+
             }
             
             .parallax-text p {
                 font-size: 1rem;
+
             }
             
             /* Mobile menu styles */
@@ -320,11 +317,14 @@
     <!-- Parallax Section 1 -->
     <div class="parallax bg1" id="home">
         <div class="parallax-text">
+            <!-- <h2>Willkommen<br>auf der<br>Website<br>von<br>Cathrin Urban</h2> -->
             <img src="Bilder Klavier/logo.JPG" id="logobild">
+            
         </div>
     </div>
 
     <!-- Content Section 1 -->
+     <!--  zwischen Musiker/in und Instrument?  -->
     <div id="section1" class="content">
         <h2>Die Lebendigkeit eines guten akustischen Klangs ist Balsam für die Seele.</h2>
         <p>
@@ -337,7 +337,9 @@
     </div>
 
     <!-- Parallax Section 2 -->
-    <div class="parallax bg2"></div>
+    <div class="parallax bg2">
+        
+    </div>
 
     <!-- Content Section 2 -->
     <div id="section2" class="content">
@@ -346,21 +348,25 @@
             Von 1990-1994 habe ich bei der Firma C.Bechstein in Berlin eine Ausbildung zur Klavier- und Cembalobauerin absolviert. <br>
 
             Vor, während und nach dieser Ausbildung habe ich Praktika in verschiedenen Reparaturwerkstätten für Klavierbau gemacht. Auf diese Weise konnte ich, neben der industriellen Produktion von Klavieren und Flügeln bei C.Bechstein, auch Einblicke in die Restaurierung bekommen.
-            <br>
-            Ende 1995 begann meine berufliche Selbständigkeit zunächst mit einem Stimmservice. 
-            Ab 1997 habe ich, zunächst in Neukölln dann ab 1999 im Kunger-Kiez, eine eigene Werkstatt/Laden eröffnet.
-            <br>
-            Ich bin Mitglied in der Handwerkskammer und im Berufsfachverband BdK (Bund deutscher Klavierbauer) und nehme immer wieder teil an berufsspezifischen Seminaren zur Aktualisierung meines Kenntnisstandes und Vertiefung meiner Fähigkeiten.
-        </p>
+<br>
+Ende 1995 begann meine berufliche Selbständigkeit zunächst mit einem Stimmservice. 
+Ab 1997 habe ich, zunächst in Neukölln dann ab 1999 im Kunger-Kiez, eine eigene Werkstatt/Laden eröffnet.
+<br>
+Ich bin Mitglied in der Handwerkskammer und im Berufsfachverband BdK (Bund deutscher Klavierbauer) und nehme immer wieder teil an berufsspezifischen Seminaren zur Aktualisierung meines Kenntnisstandes und Vertiefung meiner Fähigkeiten.
+ 
+            </p>
+        
     </div>
 
     <!-- Parallax Section 3 -->
-    <div class="parallax bg3"></div>
+    <div class="parallax bg3">
+       
+    </div>
 
     <!-- Content Section 3 -->
     <div id="section3" class="content">
         <h2>Service</h2>
-        <p>Klaviere und Flügel bedürfen der regelmäßigen Pflege. Neben dem Stimmen und der Mechanikregulierung biete ich zahlreiche Dienstleistungen rund um das Klavier an.</p>
+        <p>Klaviere und Flügel bedürfen der regelmäßigen Pflege. Neben dem Stimmen und der Mechanikregulierung biete ich zahlreiche weitere Dienstleistungen rund um das Klavier an.</p>
         
         <!-- Accordion für Services -->
         <div class="accordion">
@@ -375,7 +381,7 @@
                 <div class="accordion-header">Reparaturen/Restaurierung</div>
                 <div class="accordion-content">
                     <p>Vor einer Restaurierung/Reparatur berate ich meine Kundschaft über die Qualität ihres Instrumentes und die Wirtschaftlichkeit  eines solchen Unterfangens.
-                    Neben der Reparatur von Mechanik, Akustischer Anlage und Tastatur, biete ich auch eine Aufarbeitung mit Schellack an.</p>
+Neben der Reparatur von Mechanik, Akustischer Anlage und Tastatur, biete ich auch eine Aufarbeitung mit Schellack an.</p>
                 </div>
             </div>
             
@@ -383,7 +389,7 @@
                 <div class="accordion-header">Lautstärkeregelung</div>
                 <div class="accordion-content">
                     <p>Was viele nicht wissen: auch in fast allen alten Klaviere und Flügeln ist der Einbau einer Stummschaltung (spielen über Kopfhörer) möglich.
-                    Oder der Einbau eines Moderators (Leiste mit Filz), der die Lautstärke reduziert.</p>
+Oder der Einbau eines Moderators (Leiste mit Filz), der die Lautstärke reduziert.</p>
                 </div>
             </div>
             
@@ -391,11 +397,11 @@
                 <div class="accordion-header">Beratung</div>
                 <div class="accordion-content">
                     <p>Ich stelle Ihnen meine 30 jährige Berufserfahrung zur Verfügung. Gerne beantworte ich Ihnen Fragen wie: <br>
-                    Wo ist der beste Standort fürs Klavier/Flügel?<br>
-                    Wie pflege ich die Oberfläche?<br>
-                    Lohnt sich die Restaurierung eines Familienerbstückes?<br>
-                    Etc. <br>
-                    Ebenso biete ich eine Kaufberatung außerhalb der Werkstatt an.</p>
+Wo ist der beste Standort fürs Klavier/Flügel?<br>
+Wie pflege ich die Oberfläche?<br>
+Lohnt sich die Restaurierung eines Familienerbstückes?<br>
+Etc. <br>
+Ebenso biete ich eine Kaufberatung außerhalb der Werkstatt an.</p>
                 </div>
             </div>
             
@@ -403,7 +409,7 @@
                 <div class="accordion-header">Verkauf</div>
                 <div class="accordion-content">
                     <p>Mein Bestreben ist es, Ihnen Instrumente von besonderer Klangschönheit und guter Spielbarkeit anzubieten.
-                    Dafür achte ich beim Ankauf der gebrauchten Instrumente auf eine Bauart, die die Mühen einer sorgfältigen Restaurierung von guter Qualität durchzuführen lohnt.</p>
+Dafür achte ich beim Ankauf der gebrauchten Instrumente auf eine Bauart, die die Mühen einer sorgfältigen Restaurierung von guter Qualität durchzuführen lohnt.</p>
                 </div>
             </div>
             
@@ -411,7 +417,7 @@
                 <div class="accordion-header">Vermietung</div>
                 <div class="accordion-content">
                     <p>Ein Teil der Instrumente in meinem Laden können zu günstigen Konditionen gemietet werden.
-                    Bei Kaufwunsch wird Ihnen bis zu einem bestimmten Zeitrahmen die gesamten Mietzahlungen angerechnet.</p>
+Bei Kaufwunsch wird Ihnen bis zu einem bestimmten Zeitrahmen die gesamten Mietzahlungen angerechnet.</p>
                 </div>
             </div>
             
@@ -419,7 +425,7 @@
                 <div class="accordion-header">Transport</div>
                 <div class="accordion-content">
                     <p>Sie wollen umziehen?
-                    Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</p>
+Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</p>
                 </div>
             </div>
         </div>
@@ -427,73 +433,75 @@
     </div>
 
     <!-- Parallax Section 4 -->
-    <div class="parallax bg4"></div>
-
-    <!-- Content Section 4 -->
-    <div id="section4" class="content">
-        <h2>Kontakt</h2>
-        
-        <div style="max-width: 800px; margin: 0 auto;">
-            <!-- Kontaktinformationen in zwei Boxen -->
-            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-bottom: 40px;">
-                <!-- Linke Box: Adresse & Öffnungszeiten -->
-                <div style="flex: 1; min-width: 300px; background-color: #f9f9f9; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                    <h3 style="text-align: center; margin-bottom: 25px; color: #333;">Adresse & Öffnungszeiten</h3>
-                    <div style="text-align: center;">
-                        <p style="margin-bottom: 20px; font-size: 1.2rem;">
-                            <strong>Werkstatt:</strong><br>
-                            Karl-Kunger-Str. 55<br>
-                            12435 Berlin
-                        </p>
-                        <p style="margin-bottom: 20px; font-size: 1.2rem;">
-                            <strong>Öffnungszeiten:</strong><br>
-                            Montag - Dienstag:<br>
-                            12:00 - 26:00 Uhr
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Rechte Box: Kontakt -->
-                <div style="flex: 1; min-width: 300px; background-color: #f9f9f9; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                    <h3 style="text-align: center; margin-bottom: 25px; color: #333;">Kontakt</h3>
-                    <div style="text-align: center;">
-                        <p style="margin-bottom: 20px; font-size: 1.2rem;">
-                            <strong>Telefon:</strong><br>
-                            <a href="tel:+493068086134" style="color: #333; text-decoration: none;">(030) 680 861 34</a>
-                        </p>
-                        <p style="margin-bottom: 20px; font-size: 1.2rem;">
-                            <strong>E-Mail:</strong><br>
-                            <a href="mailto:klavierwerkstatt.urban@posteo.de" style="color: #333; text-decoration: none;">klavierwerkstatt.urban@posteo.de</a>
-                        </p>
-                    </div>
+    <div class="parallax bg4">
+       
+    </div>
+<!-- Content Section 4 -->
+<div id="section4" class="content">
+    <h2>Kontakt</h2>
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+        <!-- Kontaktinformationen in zwei Boxen -->
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-bottom: 40px;">
+            <!-- Linke Box: Adresse & Öffnungszeiten -->
+            <div style="flex: 1; min-width: 300px; background-color: #f9f9f9; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <h3 style="text-align: center; margin-bottom: 25px; color: #333;">Adresse & Öffnungszeiten</h3>
+                <div style="text-align: center;">
+                    <p style="margin-bottom: 20px; font-size: 1.2rem;">
+                        <strong>Werkstatt:</strong><br>
+                        Karl-Kunger-Str. 55<br>
+                        12435 Berlin
+                    </p>
+                    <p style="margin-bottom: 20px; font-size: 1.2rem;">
+                        <strong>Öffnungszeiten:</strong><br>
+                        Montag - Dienstag:<br>
+                        12:00 - 26:00 Uhr
+                    </p>
                 </div>
             </div>
-
-            <!-- OpenStreetMap Karte -->
-            <div style="text-align: center; margin: 40px 0;">
-                <h3 style="margin-bottom: 20px; color: #333;">Hier finden Sie meine Werkstatt</h3>
-                <div style="width: 100%; height: 300px; background-color: #f5f5f5; border-radius: 5px; overflow: hidden;">
-                    <iframe 
-                        width="100%" 
-                        height="100%" 
-                        frameborder="0" 
-                        scrolling="no" 
-                        marginheight="0" 
-                        marginwidth="0" 
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=13.4460%2C52.4890%2C13.4510%2C52.4925&layer=mapnik&marker=52.490725%2C13.448478"
-                        style="border: 1px solid #ddd;">
-                    </iframe>
+            
+            <!-- Rechte Box: Kontakt -->
+            <div style="flex: 1; min-width: 300px; background-color: #f9f9f9; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <h3 style="text-align: center; margin-bottom: 25px; color: #333;">Kontakt</h3>
+                <div style="text-align: center;">
+                    <p style="margin-bottom: 20px; font-size: 1.2rem;">
+                        <strong>Telefon:</strong><br>
+                        <a href="tel:+493068086134" style="color: #333; text-decoration: none;">(030) 680 861 34</a>
+                    </p>
+                    <p style="margin-bottom: 20px; font-size: 1.2rem;">
+                        <strong>E-Mail:</strong><br>
+                        <a href="mailto:klavierwerkstatt.urban@posteo.de" style="color: #333; text-decoration: none;">klavierwerkstatt.urban@posteo.de</a>
+                    </p>
                 </div>
-            </div>
-
-            <!-- Besuchshinweis -->
-            <div style="text-align: center; margin-bottom: 20px; padding: 20px; background-color: #f5f5f5; border-radius: 5px;">
-                <p style="font-size: 1.3rem; margin: 0;">
-                    Gerne können Sie zu den Öffnungszeiten vorbeikommen und Ihr Anliegen persönlich besprechen.
-                </p>
             </div>
         </div>
+
+        <!-- Restlicher Inhalt bleibt gleich -->
+        <!-- OpenStreetMap Karte -->
+        <div style="text-align: center; margin: 40px 0;">
+            <h3 style="margin-bottom: 20px; color: #333;">Hier finden Sie meine Werkstatt</h3>
+            <div style="width: 100%; height: 300px; background-color: #f5f5f5; border-radius: 5px; overflow: hidden;">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=13.4460%2C52.4890%2C13.4510%2C52.4925&layer=mapnik&marker=52.490725%2C13.448478"
+                    style="border: 1px solid #ddd;">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Besuchshinweis -->
+        <div style="text-align: center; margin-bottom: 20px; padding: 20px; background-color: #f5f5f5; border-radius: 5px;">
+            <p style="font-size: 1.3rem; margin: 0;">
+                Gerne können Sie zu den Öffnungszeiten vorbeikommen und Ihr Anliegen persönlich besprechen.
+            </p>
+        </div>
     </div>
+</div>
 
     <script>
         // Simple script to highlight active navigation link
@@ -560,26 +568,6 @@
                     }
                 });
             });
-            
-            // Lösung für das Parallax-Problem auf Mobilgeräten
-            function adjustParallaxForMobile() {
-                if (window.innerWidth <= 768) {
-                    // Auf Mobilgeräten: Parallax-Effekt deaktivieren
-                    document.querySelectorAll('.parallax').forEach(section => {
-                        section.style.backgroundAttachment = 'scroll';
-                    });
-                } else {
-                    // Auf Desktop: Parallax-Effekt aktivieren
-                    document.querySelectorAll('.parallax').forEach(section => {
-                        section.style.backgroundAttachment = 'fixed';
-                    });
-                }
-            }
-            
-            // Initial anwenden und bei Größenänderung
-            adjustParallaxForMobile();
-            window.addEventListener('resize', adjustParallaxForMobile);
-            window.addEventListener('orientationchange', adjustParallaxForMobile);
         });
     </script>
 </body>
