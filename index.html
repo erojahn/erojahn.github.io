@@ -1,22 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Parallax Website</title>
+    <title>Cathrin Urban - Klavierwerkstatt</title>
     <style>
         html {
             scroll-behavior: smooth;
-            height: 100%;
-            overflow: hidden; /* Verhindert zusätzliches Scrollen */
         }
-        
-        body {
-            height: 100%;
-            overflow-y: auto; /* Ermöglicht Scrollen nur im Body */
-            -webkit-overflow-scrolling: touch; /* Für flüssiges Scrollen auf iOS */
-        }
-        
         * {
             margin: 0;
             padding: 0;
@@ -30,18 +21,27 @@
             overflow-x: hidden;
         }
 
-        /* Parallax background sections - FESTE HÖHE */
+        /* Parallax background sections - FIXED SOLUTION */
         .parallax {
+            position: relative;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 100vh; /* Feste Höhe */
-            min-height: 100vh; /* Mindesthöhe */
+            height: 100vh; /* Fallback */
+            height: 100dvh; /* Neue Einheit für dynamische Viewport-Höhe */
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
+            overflow: hidden;
+        }
+
+        /* Mobile-spezifische Anpassungen */
+        @media (max-width: 768px) and (orientation: portrait) {
+            .parallax {
+                background-attachment: scroll; /* Auf Mobilgeräten kein fixed */
+                height: 80vh; /* Etwas kleiner auf Mobilgeräten */
+            }
         }
 
         /* Content sections */
@@ -62,40 +62,36 @@
         #section2 {
             background-color: #ffffff;
         }
-        
-        #vitaauflistung {
-            /* text-align: left; */
-        }
-        
+
         #section3 {
             background-color: #ffffff;
         }
-        
+
         #kontaktlink{
             color: inherit;
             font-weight: bold;
             text-decoration: none;
         }
-        
+
         #section4 {
             background-color: #ffffff;
         }
-        
+
         /* Parallax backgrounds */
         .bg1 {
-            background-image: url(Bilder\ Klavier/Klavier1.webp);
+            background-image: url('Bilder%20Klavier/Klavier1.JPG');
         }
 
         .bg2 {
-            background-image: url(Bilder\ Klavier/Klavier2.webp);
+            background-image: url('Bilder%20Klavier/Klavier2.JPG');
         }
 
         .bg3 {
-            background-image: url(Bilder\ Klavier/Klavier3.webp);
+            background-image: url('Bilder%20Klavier/Klavier3.JPG');
         }
-        
+
         .bg4 {
-            background-image: url(Bilder\ Klavier/Klavier4.webp);
+            background-image: url('Bilder%20Klavier/Klavier4.JPG');
         }
 
         /* Text inside parallax sections */
@@ -350,11 +346,11 @@
             Von 1990-1994 habe ich bei der Firma C.Bechstein in Berlin eine Ausbildung zur Klavier- und Cembalobauerin absolviert. <br>
 
             Vor, während und nach dieser Ausbildung habe ich Praktika in verschiedenen Reparaturwerkstätten für Klavierbau gemacht. Auf diese Weise konnte ich, neben der industriellen Produktion von Klavieren und Flügeln bei C.Bechstein, auch Einblicke in die Restaurierung bekommen.
-<br>
-Ende 1995 begann meine berufliche Selbständigkeit zunächst mit einem Stimmservice. 
-Ab 1997 habe ich, zunächst in Neukölln dann ab 1999 im Kunger-Kiez, eine eigene Werkstatt/Laden eröffnet.
-<br>
-Ich bin Mitglied in der Handwerkskammer und im Berufsfachverband BdK (Bund deutscher Klavierbauer) und nehme immer wieder teil an berufsspezifischen Seminaren zur Aktualisierung meines Kenntnisstandes und Vertiefung meiner Fähigkeiten.
+            <br>
+            Ende 1995 begann meine berufliche Selbständigkeit zunächst mit einem Stimmservice. 
+            Ab 1997 habe ich, zunächst in Neukölln dann ab 1999 im Kunger-Kiez, eine eigene Werkstatt/Laden eröffnet.
+            <br>
+            Ich bin Mitglied in der Handwerkskammer und im Berufsfachverband BdK (Bund deutscher Klavierbauer) und nehme immer wieder teil an berufsspezifischen Seminaren zur Aktualisierung meines Kenntnisstandes und Vertiefung meiner Fähigkeiten.
         </p>
     </div>
 
@@ -379,7 +375,7 @@ Ich bin Mitglied in der Handwerkskammer und im Berufsfachverband BdK (Bund deuts
                 <div class="accordion-header">Reparaturen/Restaurierung</div>
                 <div class="accordion-content">
                     <p>Vor einer Restaurierung/Reparatur berate ich meine Kundschaft über die Qualität ihres Instrumentes und die Wirtschaftlichkeit  eines solchen Unterfangens.
-Neben der Reparatur von Mechanik, Akustischer Anlage und Tastatur, biete ich auch eine Aufarbeitung mit Schellack an.</p>
+                    Neben der Reparatur von Mechanik, Akustischer Anlage und Tastatur, biete ich auch eine Aufarbeitung mit Schellack an.</p>
                 </div>
             </div>
             
@@ -387,7 +383,7 @@ Neben der Reparatur von Mechanik, Akustischer Anlage und Tastatur, biete ich auc
                 <div class="accordion-header">Lautstärkeregelung</div>
                 <div class="accordion-content">
                     <p>Was viele nicht wissen: auch in fast allen alten Klaviere und Flügeln ist der Einbau einer Stummschaltung (spielen über Kopfhörer) möglich.
-Oder der Einbau eines Moderators (Leiste mit Filz), der die Lautstärke reduziert.</p>
+                    Oder der Einbau eines Moderators (Leiste mit Filz), der die Lautstärke reduziert.</p>
                 </div>
             </div>
             
@@ -395,11 +391,11 @@ Oder der Einbau eines Moderators (Leiste mit Filz), der die Lautstärke reduzier
                 <div class="accordion-header">Beratung</div>
                 <div class="accordion-content">
                     <p>Ich stelle Ihnen meine 30 jährige Berufserfahrung zur Verfügung. Gerne beantworte ich Ihnen Fragen wie: <br>
-Wo ist der beste Standort fürs Klavier/Flügel?<br>
-Wie pflege ich die Oberfläche?<br>
-Lohnt sich die Restaurierung eines Familienerbstückes?<br>
-Etc. <br>
-Ebenso biete ich eine Kaufberatung außerhalb der Werkstatt an.</p>
+                    Wo ist der beste Standort fürs Klavier/Flügel?<br>
+                    Wie pflege ich die Oberfläche?<br>
+                    Lohnt sich die Restaurierung eines Familienerbstückes?<br>
+                    Etc. <br>
+                    Ebenso biete ich eine Kaufberatung außerhalb der Werkstatt an.</p>
                 </div>
             </div>
             
@@ -407,7 +403,7 @@ Ebenso biete ich eine Kaufberatung außerhalb der Werkstatt an.</p>
                 <div class="accordion-header">Verkauf</div>
                 <div class="accordion-content">
                     <p>Mein Bestreben ist es, Ihnen Instrumente von besonderer Klangschönheit und guter Spielbarkeit anzubieten.
-Dafür achte ich beim Ankauf der gebrauchten Instrumente auf eine Bauart, die die Mühen einer sorgfältigen Restaurierung von guter Qualität durchzuführen lohnt.</p>
+                    Dafür achte ich beim Ankauf der gebrauchten Instrumente auf eine Bauart, die die Mühen einer sorgfältigen Restaurierung von guter Qualität durchzuführen lohnt.</p>
                 </div>
             </div>
             
@@ -415,7 +411,7 @@ Dafür achte ich beim Ankauf der gebrauchten Instrumente auf eine Bauart, die di
                 <div class="accordion-header">Vermietung</div>
                 <div class="accordion-content">
                     <p>Ein Teil der Instrumente in meinem Laden können zu günstigen Konditionen gemietet werden.
-Bei Kaufwunsch wird Ihnen bis zu einem bestimmten Zeitrahmen die gesamten Mietzahlungen angerechnet.</p>
+                    Bei Kaufwunsch wird Ihnen bis zu einem bestimmten Zeitrahmen die gesamten Mietzahlungen angerechnet.</p>
                 </div>
             </div>
             
@@ -423,7 +419,7 @@ Bei Kaufwunsch wird Ihnen bis zu einem bestimmten Zeitrahmen die gesamten Mietza
                 <div class="accordion-header">Transport</div>
                 <div class="accordion-content">
                     <p>Sie wollen umziehen?
-Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</p>
+                    Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</p>
                 </div>
             </div>
         </div>
@@ -565,11 +561,25 @@ Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</
                 });
             });
             
-      
-            // Initial und bei Größenänderung anwenden
-            setParallaxHeight();
-            window.addEventListener('resize', setParallaxHeight);
-            window.addEventListener('orientationchange', setParallaxHeight);
+            // Lösung für das Parallax-Problem auf Mobilgeräten
+            function adjustParallaxForMobile() {
+                if (window.innerWidth <= 768) {
+                    // Auf Mobilgeräten: Parallax-Effekt deaktivieren
+                    document.querySelectorAll('.parallax').forEach(section => {
+                        section.style.backgroundAttachment = 'scroll';
+                    });
+                } else {
+                    // Auf Desktop: Parallax-Effekt aktivieren
+                    document.querySelectorAll('.parallax').forEach(section => {
+                        section.style.backgroundAttachment = 'fixed';
+                    });
+                }
+            }
+            
+            // Initial anwenden und bei Größenänderung
+            adjustParallaxForMobile();
+            window.addEventListener('resize', adjustParallaxForMobile);
+            window.addEventListener('orientationchange', adjustParallaxForMobile);
         });
     </script>
 </body>
