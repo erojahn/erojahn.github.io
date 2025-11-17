@@ -83,19 +83,19 @@
         
         /* Parallax backgrounds */
         .bg1 {
-            background-image: url(Bilder\ Klavier/Klavier1.JPG);
+            background-image: url(Bilder\ Klavier/Klavier1.webp);
         }
 
         .bg2 {
-            background-image: url(Bilder\ Klavier/Klavier2.JPG);
+            background-image: url(Bilder\ Klavier/Klavier2.webp);
         }
 
         .bg3 {
-            background-image: url(Bilder\ Klavier/Klavier3.JPG);
+            background-image: url(Bilder\ Klavier/Klavier3.webp);
         }
         
         .bg4 {
-            background-image: url(Bilder\ Klavier/Klavier4.JPG);
+            background-image: url(Bilder\ Klavier/Klavier4.webp);
         }
 
         /* Text inside parallax sections */
@@ -565,15 +565,7 @@ Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</
                 });
             });
             
-            // Lösung für das Problem mit der sich ändernden Viewport-Höhe auf Mobilgeräten
-            function setParallaxHeight() {
-                // Setze die Höhe der Parallax-Sektionen auf die aktuelle Viewport-Höhe
-                const parallaxSections = document.querySelectorAll('.parallax');
-                parallaxSections.forEach(section => {
-                    section.style.height = window.innerHeight + 'px';
-                });
-            }
-            
+      
             // Initial und bei Größenänderung anwenden
             setParallaxHeight();
             window.addEventListener('resize', setParallaxHeight);
