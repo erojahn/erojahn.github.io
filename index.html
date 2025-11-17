@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Parallax Website</title>
+    <style>
+        html {
+                scroll-behavior: smooth;
+              }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Parallax background sections */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Content sections */
+        .content {
+            padding: 80px 20px;
+            text-align: center;
+            
+        }
+
+        /* Individual sections */
+        #logobild {
+
+        max-width: 40%;
+
+        }
+        #section1 {
+            background-color: #ffffff;
+        }
+
+        #section2 {
+            background-color: #ffffff;
+            
+        }
+        #vitaauflistung {
+
+        /* text-align: left; */
+
+        }
+        #section3 {
+            background-color: #ffffff;
+        }
+        #kontaktlink{
+            color: inherit;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        #section4 {
+            background-color: #ffffff;
+        }
+        /* Parallax backgrounds */
+        .bg1 {
+            background-image: url(Bilder\ Klavier/Klavier1.JPG) ;
+        }
+
+        .bg2 {
+            background-image: url(Bilder\ Klavier/Klavier2.JPG) ;
+        }
+
+        .bg3 {
+            background-image: url(Bilder\ Klavier/Klavier3.JPG) ;
+        }
+        .bg4 {
+            background-image: url(Bilder\ Klavier/Klavier4.JPG) ;
+        }
+
+        /* Text inside parallax sections */
+        .parallax-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.6);
+            border-radius: 10px;
+            max-width: 600px;
+        }
+
+        .parallax-text h2 {
+            font-family: sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .parallax-text p {
+            font-size: 1.2rem;
+        }
+
+        /* Content section styling */
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .content p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 1.3rem;
+        }
+
+        /* Simple navigation */
+        nav {
+            position:fixed;
+            top: 0;
+            width: 100%;
+            background-color: #161405;
+            padding: 8px 0;
+            z-index: 1000;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: #d1bc00;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+          
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            color: white;
+            font-family: sans-serif;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color:#d1bc00;
+        }
+
+        /* Mobile menu button */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: sans-serif;
+            font-weight: bold;
+            padding: 5px 10px;
+            /* border: 1px solid rgba(255,255,255,0.3); */
+            /* border-radius: 3px */
+        }
+
+        .menu-toggle span {
+            margin-right: 5px;
+        }
+
+        /* Accordion Styles */
+        .accordion {
+            max-width: 800px;
+            margin: 30px auto;
+            text-align: left;
+        }
+
+        .accordion-item {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background-color: #f5f5f5;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .accordion-header:hover {
+            background-color:#d1cda7;
+        }
+
+        .accordion-header::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .accordion-header.active::after {
+            content: '-';
+        }
+
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            background-color: white;
+        }
+
+        .accordion-content.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .parallax-text h2 {
+                font-size: 1.8rem;
+
+            }
+            
+            .parallax-text p {
+                font-size: 1rem;
+
+            }
+            
+            /* Mobile menu styles */
+            .menu-toggle {
+                display: flex;
+                align-items: center;
+            }
+            
+            nav {
+                padding: 12px 0;
+                min-height: 50px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+                background-color: #161405;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                margin: 0;
+            }
+            
+            nav ul.active {
+                max-height: 300px;
+                padding: 10px 0;
+                border-top: 1px solid #d1bc00;
+            }
+            
+            nav li {
+                margin: 10px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            nav a {
+                display: block;
+                padding: 10px 0;
+            }
+            
+            .accordion-header {
+                padding: 12px 15px;
+                font-size: 1rem;
+            }
+            
+            .accordion-content {
+                padding: 0 15px;
+            }
+            
+            .accordion-content.active {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple navigation -->
+    <nav>
+        <button class="menu-toggle" id="menuToggle">
+            <span>Menü</span>☰
+        </button>
+        <ul id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#section2">Vita</a></li>
+            <li><a href="#section3">Service</a></li>
+            <li><a href="#section4">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Parallax Section 1 -->
+    <div class="parallax bg1" id="home">
+        <div class="parallax-text">
+            <!-- <h2>Willkommen<br>auf der<br>Website<br>von<br>Cathrin Urban</h2> -->
+            <img src="Bilder Klavier/logo.JPG" id="logobild">
+            
+        </div>
+    </div>
+
+    <!-- Content Section 1 -->
+     <!--  zwischen Musiker/in und Instrument?  -->
+    <div id="section1" class="content">
+        <h2>Die Lebendigkeit eines guten akustischen Klangs ist Balsam für die Seele.</h2>
+        <p>
+            Der Klavierbau ist ein Bindeglied zwischen Handwerk und Musik. 
+            Diese Handwerkskunst dient sowohl dem Laien, als auch dem professionellem Künstler/in beim Musikmachen. 
+            Gut gemachte und gestimmte akustische Klaviere und Flügel bieten den Spielenden die Erfahrung eines lebendigen Klangs, der beim Spielen formbar Gestalt annimmt. 
+            Dabei entwickelt sich eine Art von Zwiegespräch zwischen dem Musiker/in und dem Instrument. Es eröffnet sich ein Tor zu einer anderen Welt. 
+            Aus diesem Grund nutzen auch heute noch Komponisten/innen zeitgenössischer elektronischer Musik für ihre Inspiration akustische Klaviere.
+        </p>
+    </div>
+
+    <!-- Parallax Section 2 -->
+    <div class="parallax bg2">
+        
+    </div>
+
+    <!-- Content Section 2 -->
+    <div id="section2" class="content">
+        <h2>Vita</h2>
+        <p>    
+            Von 1990-1994 habe ich bei der Firma C.Bechstein in Berlin eine Ausbildung zur Klavier- und Cembalobauerin absolviert. <br>
+
+            Vor, während und nach dieser Ausbildung habe ich Praktika in verschiedenen Reparaturwerkstätten für Klavierbau gemacht. Auf diese Weise konnte ich, neben der industriellen Produktion von Klavieren und Flügeln bei C.Bechstein, auch Einblicke in die Restaurierung bekommen.
+<br>
+Ende 1995 begann meine berufliche Selbständigkeit zunächst mit einem Stimmservice. 
+Ab 1997 habe ich, zunächst in Neukölln dann ab 1999 im Kunger-Kiez, eine eigene Werkstatt/Laden eröffnet.
+<br>
+Ich bin Mitglied in der Handwerkskammer und im Berufsfachverband BdK (Bund deutscher Klavierbauer) und nehme immer wieder teil an berufsspezifischen Seminaren zur Aktualisierung meines Kenntnisstandes und Vertiefung meiner Fähigkeiten.
+ 
+            </p>
+        
+    </div>
+
+    <!-- Parallax Section 3 -->
+    <div class="parallax bg3">
+       
+    </div>
+
+    <!-- Content Section 3 -->
+    <div id="section3" class="content">
+        <h2>Service</h2>
+        <p>Klaviere und Flügel bedürfen der regelmäßigen Pflege. Neben dem Stimmen und der Mechanikregulierung biete ich zahlreiche weitere Dienstleistungen rund um das Klavier an.</p>
+        
+        <!-- Accordion für Services -->
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">Stimmen</div>
+                <div class="accordion-content">
+                    <p>Klaviere und Flügel müssen 1-2x jährlich gestimmt werden, je nach Standort, Luftfeuchte und Beanspruchung. Dazu komme ich zu meiner Kundschaft nach Hause.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">Reparaturen/Restaurierung</div>
+                <div class="accordion-content">
+                    <p>Vor einer Restaurierung/Reparatur berate ich meine Kundschaft über die Qualität ihres Instrumentes und die Wirtschaftlichkeit  eines solchen Unterfangens.
+Neben der Reparatur von Mechanik, Akustischer Anlage und Tastatur, biete ich auch eine Aufarbeitung mit Schellack an.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">Lautstärkeregelung</div>
+                <div class="accordion-content">
+                    <p>Was viele nicht wissen: auch in fast allen alten Klaviere und Flügeln ist der Einbau einer Stummschaltung (spielen über Kopfhörer) möglich.
+Oder der Einbau eines Moderators (Leiste mit Filz), der die Lautstärke reduziert.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">Beratung</div>
+                <div class="accordion-content">
+                    <p>Ich stelle Ihnen meine 30 jährige Berufserfahrung zur Verfügung. Gerne beantworte ich Ihnen Fragen wie: <br>
+Wo ist der beste Standort fürs Klavier/Flügel?<br>
+Wie pflege ich die Oberfläche?<br>
+Lohnt sich die Restaurierung eines Familienerbstückes?<br>
+Etc. <br>
+Ebenso biete ich eine Kaufberatung außerhalb der Werkstatt an.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">Verkauf</div>
+                <div class="accordion-content">
+                    <p>Mein Bestreben ist es, Ihnen Instrumente von besonderer Klangschönheit und guter Spielbarkeit anzubieten.
+Dafür achte ich beim Ankauf der gebrauchten Instrumente auf eine Bauart, die die Mühen einer sorgfältigen Restaurierung von guter Qualität durchzuführen lohnt.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">Vermietung</div>
+                <div class="accordion-content">
+                    <p>Ein Teil der Instrumente in meinem Laden können zu günstigen Konditionen gemietet werden.
+Bei Kaufwunsch wird Ihnen bis zu einem bestimmten Zeitrahmen die gesamten Mietzahlungen angerechnet.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">Transport</div>
+                <div class="accordion-content">
+                    <p>Sie wollen umziehen?
+Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</p>
+                </div>
+            </div>
+        </div>
+        <p>Sollten Sie meine Dienste in Anspruch nehmen wollen, <a href="#section4" id="kontaktlink">kontaktieren</a> Sie mich gerne oder besuchen Sie mich in meiner Werkstatt.</p>
+    </div>
+
+    <!-- Parallax Section 4 -->
+    <div class="parallax bg4">
+       
+    </div>
+<!-- Content Section 4 -->
+<div id="section4" class="content">
+    <h2>Kontakt</h2>
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+        <!-- Kontaktinformationen in zwei Boxen -->
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-bottom: 40px;">
+            <!-- Linke Box: Adresse & Öffnungszeiten -->
+            <div style="flex: 1; min-width: 300px; background-color: #f9f9f9; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <h3 style="text-align: center; margin-bottom: 25px; color: #333;">Adresse & Öffnungszeiten</h3>
+                <div style="text-align: center;">
+                    <p style="margin-bottom: 20px; font-size: 1.2rem;">
+                        <strong>Werkstatt:</strong><br>
+                        Karl-Kunger-Str. 55<br>
+                        12435 Berlin
+                    </p>
+                    <p style="margin-bottom: 20px; font-size: 1.2rem;">
+                        <strong>Öffnungszeiten:</strong><br>
+                        Montag - Dienstag:<br>
+                        12:00 - 26:00 Uhr
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Rechte Box: Kontakt -->
+            <div style="flex: 1; min-width: 300px; background-color: #f9f9f9; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <h3 style="text-align: center; margin-bottom: 25px; color: #333;">Kontakt</h3>
+                <div style="text-align: center;">
+                    <p style="margin-bottom: 20px; font-size: 1.2rem;">
+                        <strong>Telefon:</strong><br>
+                        <a href="tel:+493068086134" style="color: #333; text-decoration: none;">(030) 680 861 34</a>
+                    </p>
+                    <p style="margin-bottom: 20px; font-size: 1.2rem;">
+                        <strong>E-Mail:</strong><br>
+                        <a href="mailto:klavierwerkstatt.urban@posteo.de" style="color: #333; text-decoration: none;">klavierwerkstatt.urban@posteo.de</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restlicher Inhalt bleibt gleich -->
+        <!-- OpenStreetMap Karte -->
+        <div style="text-align: center; margin: 40px 0;">
+            <h3 style="margin-bottom: 20px; color: #333;">Hier finden Sie meine Werkstatt</h3>
+            <div style="width: 100%; height: 300px; background-color: #f5f5f5; border-radius: 5px; overflow: hidden;">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=13.4460%2C52.4890%2C13.4510%2C52.4925&layer=mapnik&marker=52.490725%2C13.448478"
+                    style="border: 1px solid #ddd;">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Besuchshinweis -->
+        <div style="text-align: center; margin-bottom: 20px; padding: 20px; background-color: #f5f5f5; border-radius: 5px;">
+            <p style="font-size: 1.3rem; margin: 0;">
+                Gerne können Sie zu den Öffnungszeiten vorbeikommen und Ihr Anliegen persönlich besprechen.
+            </p>
+        </div>
+    </div>
+</div>
+
+    <script>
+        // Simple script to highlight active navigation link
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.content');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const isActive = this.classList.contains('active');
+                    
+                    // Close all accordion items
+                    document.querySelectorAll('.accordion-header').forEach(h => {
+                        h.classList.remove('active');
+                    });
+                    document.querySelectorAll('.accordion-content').forEach(c => {
+                        c.classList.remove('active');
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        this.classList.add('active');
+                        content.classList.add('active');
+                    }
+                });
+            });
+            
+            // Mobile menu toggle functionality
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when a link is clicked (on mobile)
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
