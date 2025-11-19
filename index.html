@@ -66,6 +66,10 @@
             
             
         }
+        #accordiontexto{
+            text-align: justify;
+
+        }
         #section3 {
             background-color: #ffffff;
         }
@@ -128,7 +132,7 @@
         .content p {
             max-width: 800px;
             padding-bottom: 20px;
-            margin: 0 auto 0;
+            margin: 0 auto 40px;
             font-size: 1.1rem;
             text-align: justify;
 
@@ -196,7 +200,7 @@
 
         /* Accordion Styles */
         #accordioncontainer{
-            background-color:#6e6e6e;
+            background-color:#a8a8a8;
             max-width: 800px;
             margin: 30px auto 30px;
             padding: 20px;
@@ -427,14 +431,14 @@ Ich bin Mitglied in der Handwerkskammer und im Berufsfachverband BdK (Bund deuts
             <div class="accordion-item">
                 <div class="accordion-header">Stimmen</div>
                 <div class="accordion-content">
-                    <p>Klaviere und Flügel müssen 1-2x jährlich gestimmt werden, je nach Standort, Luftfeuchte und Beanspruchung. Dazu komme ich zu meiner Kundschaft nach Hause.</p>
+                    <p id="accordiontexto">Klaviere und Flügel müssen 1-2x jährlich gestimmt werden, je nach Standort, Luftfeuchte und Beanspruchung. Dazu komme ich zu meiner Kundschaft nach Hause.</p>
                 </div>
             </div>
             
             <div class="accordion-item">
                 <div class="accordion-header">Reparaturen/Restaurierung</div>
                 <div class="accordion-content">
-                    <p>Vor einer Restaurierung/Reparatur berate ich meine Kundschaft über die Qualität ihres Instrumentes und die Wirtschaftlichkeit  eines solchen Unterfangens.
+                    <p id="accordiontexto">Vor einer Restaurierung/Reparatur berate ich meine Kundschaft über die Qualität ihres Instrumentes und die Wirtschaftlichkeit  eines solchen Unterfangens.
 Neben der Reparatur von Mechanik, Akustischer Anlage und Tastatur, biete ich auch eine Aufarbeitung mit Schellack an.</p>
                 </div>
             </div>
@@ -442,7 +446,7 @@ Neben der Reparatur von Mechanik, Akustischer Anlage und Tastatur, biete ich auc
             <div class="accordion-item">
                 <div class="accordion-header">Lautstärkeregelung</div>
                 <div class="accordion-content">
-                    <p>Was viele nicht wissen: auch in fast allen alten Klaviere und Flügeln ist der Einbau einer Stummschaltung (spielen über Kopfhörer) möglich.
+                    <p id="accordiontexto">Was viele nicht wissen: auch in fast allen alten Klaviere und Flügeln ist der Einbau einer Stummschaltung (spielen über Kopfhörer) möglich.
 Oder der Einbau eines Moderators (Leiste mit Filz), der die Lautstärke reduziert.</p>
                 </div>
             </div>
@@ -450,7 +454,7 @@ Oder der Einbau eines Moderators (Leiste mit Filz), der die Lautstärke reduzier
             <div class="accordion-item">
                 <div class="accordion-header">Beratung</div>
                 <div class="accordion-content">
-                    <p>Ich stelle Ihnen meine 30 jährige Berufserfahrung zur Verfügung. Gerne beantworte ich Ihnen Fragen wie: <br>
+                    <p id="accordiontexto">Ich stelle Ihnen meine 30 jährige Berufserfahrung zur Verfügung. Gerne beantworte ich Ihnen Fragen wie: <br>
 Wo ist der beste Standort fürs Klavier/Flügel?<br>
 Wie pflege ich die Oberfläche?<br>
 Lohnt sich die Restaurierung eines Familienerbstückes?<br>
@@ -462,7 +466,7 @@ Ebenso biete ich eine Kaufberatung außerhalb der Werkstatt an.</p>
             <div class="accordion-item">
                 <div class="accordion-header">Verkauf</div>
                 <div class="accordion-content">
-                    <p>Mein Bestreben ist es, Ihnen Instrumente von besonderer Klangschönheit und guter Spielbarkeit anzubieten.
+                    <p id="accordiontexto">Mein Bestreben ist es, Ihnen Instrumente von besonderer Klangschönheit und guter Spielbarkeit anzubieten.
 Dafür achte ich beim Ankauf der gebrauchten Instrumente auf eine Bauart, die die Mühen einer sorgfältigen Restaurierung von guter Qualität durchzuführen lohnt.</p>
                 </div>
             </div>
@@ -470,7 +474,7 @@ Dafür achte ich beim Ankauf der gebrauchten Instrumente auf eine Bauart, die di
             <div class="accordion-item">
                 <div class="accordion-header">Vermietung</div>
                 <div class="accordion-content">
-                    <p>Ein Teil der Instrumente in meinem Laden können zu günstigen Konditionen gemietet werden.
+                    <p id="accordiontexto">Ein Teil der Instrumente in meinem Laden können zu günstigen Konditionen gemietet werden.
 Bei Kaufwunsch wird Ihnen bis zu einem bestimmten Zeitrahmen die gesamten Mietzahlungen angerechnet.</p>
                 </div>
             </div>
@@ -478,8 +482,8 @@ Bei Kaufwunsch wird Ihnen bis zu einem bestimmten Zeitrahmen die gesamten Mietza
             <div class="accordion-item">
                 <div class="accordion-header">Transport</div>
                 <div class="accordion-content">
-                    <p>Sie wollen umziehen?
-Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</p>
+                    <p id="accordiontexto">Sie wollen umziehen?
+Ich bin Ihnen behilflich bei der Organisation Ihres Klavier- oder Flügeltransportes.</p>
                 </div>
             </div>
         </div>
@@ -499,6 +503,7 @@ Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</
     
     <div id="untererblock">
         <!-- Kontaktinformationen in zwei Boxen -->
+         <div id="accordioncontainer">
         <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-bottom: 40px;">
             <!-- Linke Box: Adresse & Öffnungszeiten -->
             <div style="flex: 1; min-width: 344px; background-color: #f5f5f5; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
@@ -558,6 +563,7 @@ Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</
             </p>
         </div>
     </div>
+</div>
 </div>
 
     <script>
