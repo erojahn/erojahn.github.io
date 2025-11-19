@@ -64,6 +64,7 @@
             margin: 0 auto 0;
             background-color:#d1bc00;
             
+            
         }
         #section3 {
             background-color: #ffffff;
@@ -200,6 +201,7 @@
             margin: 30px auto 30px;
             padding: 20px;
             border-radius: 25px;
+            
 
         }
         .accordion {
@@ -252,8 +254,30 @@
             padding: 20px;
             max-height: 500px;
         }
+        #untererblock{
+        max-width: 800px; 
+        margin: 0 auto;
+        }
 
         /* Responsive design */
+         @media (max-width: 820px) {
+                #untererblock{
+                max-width:90%;
+                }
+                .content p {
+                max-width: 90%;
+                /* padding:20px; */
+                    
+                }
+                .content h2 {
+                max-width: 90%;
+                /* padding:20px; */
+                    }
+                 #accordioncontainer{
+                max-width: 90%;
+
+                }
+            }
         @media (max-width: 768px) {
             .parallax-text h2 {
                 font-size: 1.8rem;
@@ -265,6 +289,7 @@
 
             }
             
+
             /* Mobile menu styles */
             .menu-toggle {
                 display: flex;
@@ -472,11 +497,11 @@ Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</
         <div id="linie"><p><br></p></div>
     <h2>Kontakt</h2>
     
-    <div style="max-width: 800px; margin: 0 auto;">
+    <div id="untererblock">
         <!-- Kontaktinformationen in zwei Boxen -->
         <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-bottom: 40px;">
             <!-- Linke Box: Adresse & Öffnungszeiten -->
-            <div style="flex: 1; min-width: 300px; background-color: #f5f5f5; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <div style="flex: 1; min-width: 344px; background-color: #f5f5f5; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                 <h3 style="text-align: center; margin-bottom: 25px; color: #333;">Adresse & Öffnungszeiten</h3>
                 <div style="text-align: center;">
                     <p style="margin-bottom: 20px; font-size: 1.2rem;">
@@ -493,7 +518,7 @@ Ich bin Ihnen behilflich bei der Organisation Ihres Klavier-/Flügeltransport.</
             </div>
             
             <!-- Rechte Box: Kontakt -->
-            <div style="flex: 1; min-width: 300px; background-color: #f5f5f5; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <div style="flex: 1; min-width: 344px; background-color: #f5f5f5; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                 <h3 style="text-align: center; margin-bottom: 25px; color: #333;">Kontakt</h3>
                 <div style="text-align: center;">
                     <p style="margin-bottom: 20px; font-size: 1.2rem;">
